@@ -25,7 +25,7 @@ etf4<-read.csv("ETF4_2000_2018_d.csv", colClasses = c("證券代碼"="character"
 str(etf4)
 # If you get garbled text, you may try:
 etf4.csv<-read.csv("ETF4_2000_2018_d.csv", fileEncoding='big5',
-                   colClasses=C('factor','factor','factor','numeric','numeric'))
+                   colClasses=c('factor','factor','factor','numeric','numeric'))
 head(etf4.csv)
 str(etf4.csv)
 # using read_csv to imoprt data to tibble format
@@ -40,7 +40,7 @@ str(etf4_csv)
 install.packages("readxl")
 library(readxl)
 etf4_xls<-read_excel("ETF4_2000_2018_d.xls", 
-                     col_types =c("text", "text","text", "numeric","numeric"))
+                     col_types =c("text","text","text","numeric","numeric"))
 head(etf4_xls)
 #=============================================================================
 # clean data
