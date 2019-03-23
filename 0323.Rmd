@@ -1,0 +1,27 @@
+---
+title: "tw50_2017"
+author: "黃榆珮"
+date: "2019年3月23日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#- 成分股名單及代碼 -
+```{r}
+tw50_2017<-read.csv("2017Q4_code.csv", colClasses = c("證券代碼"="character"))
+str(tw50_2017)
+options(repos = "https://cran.rstudio.com")
+install.packages("readr")
+library(readr)
+tw50_2017<-read_csv("2017Q4_code.csv", locale = locale(encoding='big5'))
+head(tw50_2017)
+```
+# - 除權調整後日收盤價 -
+```{r}
+install.packages("readr")
+library(readr)
+tw50__2017<-read.csv("tw50.csv")
+head(tw50__2017)
+```
